@@ -1,15 +1,15 @@
 
-view: get_word_cloud_query {
+view: word_cloud_model {
   derived_table: {
     sql: SELECT
-          mintconnetionresult.entitytext  AS mintconnetionresult_entitytext,
-          COUNT(*) AS mintconnetionresult_count
-      FROM `mint_connetion_test.mint-connetion-result`  AS mintconnetionresult
-      GROUP BY
-          mintconnetionresult_entitytext
-      ORDER BY
-          mintconnetionresult_count DESC
-      LIMIT 5000 ;;
+                mintconnetionresult.entitytext  AS mintconnetionresult_entitytext,
+                COUNT(*) AS mintconnetionresult_count
+            FROM `mint_connetion_test.mint-connetion-result`  AS mintconnetionresult
+            GROUP BY
+                mintconnetionresult_entitytext
+            ORDER BY
+                mintconnetionresult_count DESC
+            LIMIT 5000 ;;
   }
 
   measure: count {
