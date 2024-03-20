@@ -65,7 +65,7 @@ view: mintconnectionconsumption {
   }
   dimension: date {
     type: date
-    sql: PARSE_DATE('%Y-%m-%d %H:%M:%S', ${TABLE}.creationtime) ;;
+    sql: PARSE_DATETIME('%Y-%m-%d %H:%M:%S', ${TABLE}.creationtime) ;;
   }
   dimension: line {
     type: number
