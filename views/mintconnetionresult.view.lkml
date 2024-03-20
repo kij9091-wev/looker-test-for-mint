@@ -29,7 +29,7 @@ view: mintconnetionresult {
   }
   dimension: date {
     type: date
-    sql: PARSE_DATETIME('%Y-%m-%d %H:%M:%S', ${TABLE}.creationtime) ;;
+    sql: PARSE_DATETIME('%Y.%m.%d %H:%M', ${TABLE}.creationtime) ;;
   }
   dimension: entities_creationtime {
     type: string
