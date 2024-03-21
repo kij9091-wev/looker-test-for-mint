@@ -22,7 +22,7 @@ view: entity_word_cloud {
     sql: ${TABLE}.mintconnetionresult_entitytext ;;
   }
 
-  measure: mintconnetionresult_count {
+  dimension: mintconnetionresult_count {
     type: number
     sql: ${TABLE}.mintconnetionresult_count ;;
   }
